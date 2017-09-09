@@ -1,0 +1,29 @@
+{
+  "name": "toObject",
+  "version": "0.1.0",
+  "description": "Easily convert an array to an object.",
+  "main": "toObject.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "nyc": {
+    "exclude": [
+      "spec/**/*.js"
+    ],
+    "reporter": "clover",
+    "report-dir": "coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theZieger/toObject.git"
+  },
+  "author": "thezieger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theZieger/toObject/issues"
+  },
+  "homepage": "https://github.com/theZieger/toObject#readme",
+  "devDependencies": {
+    "jasmine": "^2.6.0"
+  }
+}
