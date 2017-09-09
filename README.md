@@ -1,4 +1,5 @@
-# toObject 0.1.0
+# toObject 0.1.0 [![Build Status](https://scrutinizer-ci.com/g/theZieger/toObject/badges/build.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/theZieger/toObject/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/theZieger/toObject/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master)
+
 > Easily convert an array to an object.
 
 ## Getting started
@@ -31,13 +32,13 @@ Sometimes more than 2000 objects inside an array with countless attributes hit o
 You can imagine looping over those 2000 objects can be tough for the clients device. So I map these array of objects to an associative object which can be accessed a lot faster by simply doing a member access by the ID.
 A lot faster and way more performant. That's the story how this function landed inside this repo. For me it's quite handy.
 
-Anyway. Here is a code example how to use the `utilities.toObject` function:
+Anyway. Here is a code example how to use the `toObject` function:
 
 ```javascript
-// make sure utilities.js is already available when this code runs
+// make sure toObject.js is already available when this code runs
 
 var states = ['Sachsen', 'Sachsen-Anhalt', 'Berlin', 'Hamburg'];
-var statesObject = utilities.toObject(states);
+var statesObject = toObject(states);
 
 console.log(statesObject);
 
@@ -64,9 +65,9 @@ var news = [
     }
 ];
 
-var newsObject1 = utilities.toObject(news, 'id');
-var newsObject2 = utilities.toObject(news, ['id', 'id']);
-var newsObject3 = utilities.toObject(news, function(val, i) {
+var newsObject1 = toObject(news, 'id');
+var newsObject2 = toObject(news, ['id', 'id']);
+var newsObject3 = toObject(news, function(val, i) {
     return val.id + '_' + i;
 });
 
