@@ -1,4 +1,4 @@
-# toObject 0.1.0 [![Build Status](https://scrutinizer-ci.com/g/theZieger/toObject/badges/build.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/theZieger/toObject/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/theZieger/toObject/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master)
+# toObject 0.2.0 [![Build Status](https://scrutinizer-ci.com/g/theZieger/toObject/badges/build.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/theZieger/toObject/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/theZieger/toObject/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master)
 
 > Easily convert an array to an object.
 

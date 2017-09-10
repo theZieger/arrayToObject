@@ -1,8 +1,8 @@
 {
   "name": "toObject",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Easily convert an array to an object.",
-  "main": "toObject.js",
+  "main": "dist/toObject.js",
   "scripts": {
     "test": "jasmine",
     "build": "npm test && node_modules/umd/bin/cli.js toObject src/toObject.js dist/toObject.js -c"
