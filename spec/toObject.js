@@ -1,4 +1,4 @@
-var toObject = require('../toObject.js');
+var toObject = require('../src/toObject.js');
 
 describe('toObject', function() {
     describe('failing tests', function() {
