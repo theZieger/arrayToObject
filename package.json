@@ -9,7 +9,8 @@
   },
   "nyc": {
     "exclude": [
-      "spec/**/*.js"
+      "spec/**/*.js",
+      "dist/**/*.js"
     ],
     "reporter": "clover",
     "report-dir": "coverage"
