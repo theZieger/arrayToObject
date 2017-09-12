@@ -1,5 +1,5 @@
 {
-  "name": "arrayToObject",
+  "name": "arr-to-object",
   "version": "0.3.0",
   "description": "Easily convert an array to an object.",
   "main": "dist/arrayToObject.js",

@@ -9,7 +9,7 @@ There is more than one way to use `arrayToObject` inside your project. I prefer 
 If you haven't used [npm](http://npmjs.com/) (Node Package manager) before, be sure to check out the [Getting Started](https://docs.npmjs.com/getting-started/what-is-npm) guide, as it explains how to install and use npm. Once you're familiar with that process, you may install the `arrayToObject` module with this command inside your project:
 
 ```bash
-npm install arrayToObject --save-dev
+npm install arr-to-object --save-dev
 ```
 
 Once the module has been installed, you may integrate that file into your build process (e.g concatenating and uglifying your JS with Grunt or whatever) since the `--save-dev` option is meant for development only.
