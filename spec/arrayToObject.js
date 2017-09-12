@@ -1,24 +1,24 @@
-var toObject = require('../src/toObject.js');
+var arrayToObject = require('../src/arrayToObject.js');
 
-describe('toObject', function() {
+describe('arrayToObject', function() {
     describe('failing tests', function() {
         it("should fail because the arr parameter is undefined", function() {
-            expect(toObject).toThrowError(TypeError);
+            expect(arrayToObject).toThrowError(TypeError);
         });
 
         it("should fail because the arr parameter is not an Array", function() {
-            expect(toObject.bind(null, {})).toThrowError(TypeError);
+            expect(arrayToObject.bind(null, {})).toThrowError(TypeError);
         });
 
         it("should fail because the mapBy not of type String, Array or Function and not falsy", function() {
-            expect(toObject.bind(null, [], {})).toThrowError(TypeError);
+            expect(arrayToObject.bind(null, [], {})).toThrowError(TypeError);
         });
     });
 
-    describe('array of primitives toObject', function() {
+    describe('array of primitives arrayToObject', function() {
         // test example from README.md
         var states = ['Sachsen', 'Sachsen-Anhalt', 'Berlin', 'Hamburg'];
-        var statesObject = toObject(states);
+        var statesObject = arrayToObject(states);
         // end test example from README.md
 
         it("should be able to access object by index", function() {
@@ -46,8 +46,8 @@ describe('toObject', function() {
         }
     ];
 
-    describe('array of objects toObject - string mapBy', function() {
-        var newsObject = toObject(news, 'id');
+    describe('array of objects arrayToObject - string mapBy', function() {
+        var newsObject = arrayToObject(news, 'id');
 
         it("should be able to access object by ID", function() {
             expect(newsObject[1337].headline).toEqual('Germans wurst at penalties');
@@ -58,8 +58,8 @@ describe('toObject', function() {
         });
     });
 
-    describe('array of objects toObject - array mapBy', function() {
-        var newsObject = toObject(news, ['id', 'id']);
+    describe('array of objects arrayToObject - array mapBy', function() {
+        var newsObject = arrayToObject(news, ['id', 'id']);
 
         it("should be able to access object by ID_ID", function() {
             expect(newsObject['1337_1337'].headline).toEqual('Germans wurst at penalties');
@@ -70,8 +70,8 @@ describe('toObject', function() {
         });
     });
 
-    describe('array of objects toObject - function mapBy', function() {
-        var newsObject = toObject(news, function(val, i) {
+    describe('array of objects arrayToObject - function mapBy', function() {
+        var newsObject = arrayToObject(news, function(val, i) {
             return val.id + '_' + i;
         });
 

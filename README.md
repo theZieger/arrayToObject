@@ -1,20 +1,20 @@
-# toObject 0.2.0 [![Build Status](https://scrutinizer-ci.com/g/theZieger/toObject/badges/build.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/theZieger/toObject/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/theZieger/toObject/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/theZieger/toObject/?branch=master)
+# arrayToObject 0.3.0 [![Build Status](https://scrutinizer-ci.com/g/theZieger/arrayToObject/badges/build.png?b=master)](https://scrutinizer-ci.com/g/theZieger/arrayToObject/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/theZieger/arrayToObject/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/theZieger/arrayToObject/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/theZieger/arrayToObject/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/theZieger/arrayToObject/?branch=master)
 
 > Easily convert an array to an object.
 
 ## Getting started
 
-There is more than one way to use `toObject` inside your project. I prefer using npm for dependency management.
+There is more than one way to use `arrayToObject` inside your project. I prefer using npm for dependency management.
 
-If you haven't used [npm](http://npmjs.com/) (Node Package manager) before, be sure to check out the [Getting Started](https://docs.npmjs.com/getting-started/what-is-npm) guide, as it explains how to install and use npm. Once you're familiar with that process, you may install the `toObject` module with this command inside your project:
+If you haven't used [npm](http://npmjs.com/) (Node Package manager) before, be sure to check out the [Getting Started](https://docs.npmjs.com/getting-started/what-is-npm) guide, as it explains how to install and use npm. Once you're familiar with that process, you may install the `arrayToObject` module with this command inside your project:
 
 ```bash
-npm install toObject --save-dev
+npm install arrayToObject --save-dev
 ```
 
 Once the module has been installed, you may integrate that file into your build process (e.g concatenating and uglifying your JS with Grunt or whatever) since the `--save-dev` option is meant for development only.
 
-## toObject(arr, mapBy)
+## arrayToObject(arr, mapBy)
 
 Turns an array of values into a object.
 
@@ -25,20 +25,20 @@ The `mapBy` argument is therefore totally optional.
 When mapBy is a function it will take three arguments:
 1. `val` - the current object which is processed
 1. `i` - the index of the current object which is processed
-1. `arr` - the array given to toObject as first parameter
+1. `arr` - the array given to arrayToObject as first parameter
 
 This function was created because I, as a front-end developer, have to handle a lot of data from API responses. And when I say a lot, I mean a lot.
 Sometimes more than 2000 objects inside an array with countless attributes hit our clients and I have to enrich them with even more data from different API requests.
 You can imagine looping over those 2000 objects can be tough for the clients device. So I map these array of objects to an associative object which can be accessed a lot faster by simply doing a member access by the ID.
 A lot faster and way more performant. That's the story how this function landed inside this repo. For me it's quite handy.
 
-Anyway. Here is a code example how to use the `toObject` function:
+Anyway. Here is a code example how to use the `arrayToObject` function:
 
 ```javascript
-// make sure toObject.js is already available when this code runs
+// make sure arrayToObject.js is already available when this code runs
 
 var states = ['Sachsen', 'Sachsen-Anhalt', 'Berlin', 'Hamburg'];
-var statesObject = toObject(states);
+var statesObject = arrayToObject(states);
 
 console.log(statesObject);
 
@@ -65,9 +65,9 @@ var news = [
     }
 ];
 
-var newsObject1 = toObject(news, 'id');
-var newsObject2 = toObject(news, ['id', 'id']);
-var newsObject3 = toObject(news, function(val, i) {
+var newsObject1 = arrayToObject(news, 'id');
+var newsObject2 = arrayToObject(news, ['id', 'id']);
+var newsObject3 = arrayToObject(news, function(val, i) {
     return val.id + '_' + i;
 });
 

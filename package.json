@@ -1,11 +1,11 @@
 {
-  "name": "toObject",
-  "version": "0.2.0",
+  "name": "arrayToObject",
+  "version": "0.3.0",
   "description": "Easily convert an array to an object.",
-  "main": "dist/toObject.js",
+  "main": "dist/arrayToObject.js",
   "scripts": {
     "test": "jasmine",
-    "build": "npm test && node_modules/umd/bin/cli.js toObject src/toObject.js dist/toObject.js -c"
+    "build": "npm test && node_modules/umd/bin/cli.js arrayToObject src/arrayToObject.js dist/arrayToObject.js -c"
   },
   "nyc": {
     "exclude": [
@@ -25,14 +25,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theZieger/toObject.git"
+    "url": "git+https://github.com/theZieger/arrayToObject.git"
   },
   "author": "thezieger",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/theZieger/toObject/issues"
+    "url": "https://github.com/theZieger/arrayToObject/issues"
   },
-  "homepage": "https://github.com/theZieger/toObject#readme",
+  "homepage": "https://github.com/theZieger/arrayToObject#readme",
   "devDependencies": {
     "jasmine": "^2.6.0",
     "umd": "^3.0.1"

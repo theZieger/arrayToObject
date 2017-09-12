@@ -1,4 +1,4 @@
-Thanks for giving this a read! We're always open to your contributions to utilitiesjs.
+Thanks for giving this a read! We're always open to your contributions to arrayToObject.
 This document will get you started on how to contribute and things you should know.
 So please give it a thorough read.
 
@@ -22,7 +22,7 @@ Please also give the code of conduct a read.
 
 7. Push your branch: `git push -u origin your-branch-name`
 
-8. Submit a pull request to the upstream utilitiesjs repository.
+8. Submit a pull request to the upstream arrayToObject repository.
 
 9. Choose a descriptive title and describe your changes briefly.
 
